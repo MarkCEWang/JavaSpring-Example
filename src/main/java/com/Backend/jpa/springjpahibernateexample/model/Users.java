@@ -10,6 +10,8 @@ public class Users {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(name = "uuid")
+    private String uuid;
     @Column(name = "name")
     private String name;
     @Column(name = "score")
@@ -28,6 +30,10 @@ public class Users {
         this.id = id;
     }
 
+    public String getUuid() { return uuid; }
+
+    public void setUuid(String uuid) {this.uuid = uuid; }
+
     public String getName() {
         return name;
     }
@@ -36,9 +42,9 @@ public class Users {
         this.name = name;
     }
 
-    public Integer getScore() {
-        return score;
-    }
+    public Integer getScore() { return score; }
+
+    public void setScore(Integer score) { this.score = score; }
 
     public void setSalary(Integer score) {
         this.score = score;

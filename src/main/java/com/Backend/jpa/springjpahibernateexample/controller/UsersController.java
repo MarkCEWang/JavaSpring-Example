@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/rest/users")
@@ -32,6 +33,9 @@ public class UsersController {
 
     @PostMapping("/")
     public Users createUser(@RequestBody Users user) {
+
+        String uuid = UUID.randomUUID().toString();
+        user.setUuid(uuid);
         usersRepository.save(user);
         return user;
     }
