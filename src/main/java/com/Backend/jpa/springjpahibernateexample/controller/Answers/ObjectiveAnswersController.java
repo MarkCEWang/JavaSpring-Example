@@ -20,6 +20,11 @@ public class ObjectiveAnswersController {
     @GetMapping("/{id}")
     public ObjectiveAnswers getId(@PathVariable("id") final Integer id) { return objectiveAnswersRepository.findOne(id); }
 
+    @GetMapping("/category/{category}")
+    public List<ObjectiveAnswers> getByCategory(@PathVariable("category") final String category) {
+        return objectiveAnswersRepository.findByCategory(category);
+    }
+
     @PostMapping("/")
     public ObjectiveAnswers create(@RequestBody ObjectiveAnswers obj_ans) {
         objectiveAnswersRepository.save(obj_ans);
@@ -30,6 +35,7 @@ public class ObjectiveAnswersController {
     public ObjectiveAnswers update(@PathVariable("id") final Integer id, @RequestBody ObjectiveAnswers new_ans) {
         ObjectiveAnswers obj_ans = getId(id);
         obj_ans.setContent(new_ans.getContent());
+        obj_ans.setCategory(new_ans.getCategory());
         objectiveAnswersRepository.save(obj_ans);
         return obj_ans;
     }

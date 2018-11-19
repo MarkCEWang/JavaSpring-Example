@@ -12,6 +12,8 @@ public class ObjectiveAnswers {
     private Integer id;
     @Column(name = "content")
     private String content;
+    @Column(name = "category")
+    private String category;
 
     public Integer getId() {
         return id;
@@ -27,5 +29,13 @@ public class ObjectiveAnswers {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

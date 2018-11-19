@@ -14,3 +14,6 @@ This project depicts the Spring Boot Example with Spring Data JPA with Hibernate
 
 ## Compilation Command
 - `mvn clean install` - Plain maven clean and install
+
+##Note
+- this project uses TechPrimer's Spring boot example as template
