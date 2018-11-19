@@ -1,6 +1,6 @@
-package com.techprimers.jpa.springjpahibernateexample.repository;
+package com.Backend.jpa.springjpahibernateexample.repository;
 
-import com.techprimers.jpa.springjpahibernateexample.model.Users;
+import com.Backend.jpa.springjpahibernateexample.model.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

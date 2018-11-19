@@ -1,4 +1,4 @@
-package com.techprimers.jpa.springjpahibernateexample;
+package com.Backend.jpa.springjpahibernateexample;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
