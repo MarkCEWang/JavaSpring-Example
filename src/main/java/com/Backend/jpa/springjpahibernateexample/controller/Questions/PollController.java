@@ -31,6 +31,7 @@ public class PollController {
         return poll;
     }
 
+
     @PutMapping("/{id}")
     public Poll update(@PathVariable("id") final Integer id, @RequestBody Poll newPoll) {
         Poll poll = getId(id);
@@ -46,6 +47,7 @@ public class PollController {
         return poll;
     }
 
+    //all update the set this question belongs to
     @PutMapping("/set/{id}/{setId}")
     public Integer updateSet(@PathVariable("id") final Integer id, @PathVariable("id") final Integer setId) {
         Poll poll = getId(id);

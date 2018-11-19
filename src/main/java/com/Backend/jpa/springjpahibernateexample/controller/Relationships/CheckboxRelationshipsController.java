@@ -22,12 +22,13 @@ public class CheckboxRelationshipsController {
     @GetMapping("/{id}")
     public CheckboxRelationship getId(@PathVariable("id") final Integer id) { return checkboxRelationshipRepository.findOne(id); }
 
+    //get all answers that is mapped to this question
     @GetMapping("/question/{id}")
     public List<CheckboxRelationship> getRelationshipsByQuestionId(@PathVariable("id") final Integer id) {
         return checkboxRelationshipRepository.findByQuestionId(id);
-
     }
 
+    //get all the questions that uses this answer
     @GetMapping("/answer/{id}")
     public List<CheckboxRelationship> getRelationshipsByAnswerId(@PathVariable("id") final Integer id) {
         return checkboxRelationshipRepository.findByAnswerId(id);

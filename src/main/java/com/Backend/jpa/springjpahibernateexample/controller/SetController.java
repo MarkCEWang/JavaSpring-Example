@@ -33,6 +33,7 @@ public class SetController {
         return set;
     }
 
+    //increase the number of questions this question set has by 1
     @PutMapping("/increment/{id}")
     public void incrementCount(@PathVariable("id") final Integer id) {
         QuestionSet set = getId(id);
@@ -40,6 +41,7 @@ public class SetController {
         setRepository.save(set);
     }
 
+    //decrease the number of questions this question set has by 1
     @PutMapping("/decrement/{id}")
     public boolean decrementCount(@PathVariable("id") final Integer id) {
         QuestionSet set = getId(id);

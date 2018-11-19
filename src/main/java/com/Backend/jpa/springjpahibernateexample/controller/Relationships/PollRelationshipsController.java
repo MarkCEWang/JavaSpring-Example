@@ -52,6 +52,7 @@ public class PollRelationshipsController {
         Integer question_number = this.getRelationshipsByQuestionId(new_Relationship.getQuestionId()).size();
 
         PollRelationship pollRelationship = getId(id);
+        //A poll questions should either have a max of 4 or 2 answers
         if ((option && question_number < 4) || (!option && question_number < 2)) {
             pollRelationship.setQuestionId(new_Relationship.getQuestionId());
             pollRelationship.setAnswerId(new_Relationship.getAnswerId());

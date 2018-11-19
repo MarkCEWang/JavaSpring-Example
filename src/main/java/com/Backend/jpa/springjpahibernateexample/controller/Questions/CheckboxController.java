@@ -30,6 +30,7 @@ public class CheckboxController {
         return checkbox;
     }
 
+    //update the content of the checkbox question
     @PutMapping("/content/{id}")
     public Checkbox update(@PathVariable("id") final Integer id, @RequestBody Checkbox newCheckbox) {
         Checkbox checkbox = getId(id);
@@ -45,6 +46,7 @@ public class CheckboxController {
         return checkbox;
     }
 
+    //update the set this question belongs to
     @PutMapping("/set/{id}/{setId}")
     public Integer updateSet(@PathVariable("id") final Integer id, @PathVariable("setId") final Integer setId) {
         Checkbox checkbox = getId(id);

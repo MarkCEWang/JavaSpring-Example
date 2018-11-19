@@ -20,6 +20,7 @@ public class ObjectiveAnswersController {
     @GetMapping("/{id}")
     public ObjectiveAnswers getId(@PathVariable("id") final Integer id) { return objectiveAnswersRepository.findOne(id); }
 
+    //all get all answer with the assigned category (specifically for metric question
     @GetMapping("/category/{category}")
     public List<ObjectiveAnswers> getByCategory(@PathVariable("category") final String category) {
         return objectiveAnswersRepository.findByCategory(category);

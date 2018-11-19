@@ -39,6 +39,7 @@ public class TriviaController {
         return trivia;
     }
 
+    //update the set this question belongs to
     @PutMapping("/set/{id}/{setId}")
     public Integer updateSet(@PathVariable("id") final Integer id, @PathVariable("setId") final Integer setId) {
         Trivia trivia = getId(id);

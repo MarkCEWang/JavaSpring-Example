@@ -28,12 +28,14 @@ public class MetricController {
     @GetMapping("/{id}")
     public Metric getId(@PathVariable("id") final Integer id) { return metricRepository.findOne(id); }
 
+    //get all the choices on the horizontal axis of a question
     @GetMapping("/horizontal/{id}")
     public List<ObjectiveAnswers> getHorizontalCategoryChoices(@PathVariable("id") final Integer id) {
         String category = this.getId(id).getHorizontalCategory();
         return objectiveAnswersController.getByCategory(category);
     }
 
+    //get all the choices on the vertical axis of a question
     @GetMapping("/vertical/{id}")
     public List<ObjectiveAnswers> getVerticalCategoryChoices(@PathVariable("id") final Integer id) {
         String category = this.getId(id).getVerticalCategory();
@@ -47,6 +49,7 @@ public class MetricController {
         return metric;
     }
 
+    //update content and setId of the metric question
     @PutMapping("/{id}")
     public Metric update(@PathVariable("id") final Integer id, @RequestBody Metric newMetric) {
         Metric metric = getId(id);
@@ -60,6 +63,7 @@ public class MetricController {
         return metric;
     }
 
+    //update set of the question it belongs to
     @PutMapping("/set/{id}/{setId}")
     public Integer updateSet(@PathVariable("id") final Integer id, @PathVariable("id") final Integer setId) {
         Metric metric = getId(id);

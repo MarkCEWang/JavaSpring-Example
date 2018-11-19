@@ -40,6 +40,7 @@ public class UsersController {
         return user;
     }
 
+    //update all information of this user
     @PutMapping("/{id}")
     public Users updateAll(@PathVariable("id") final Integer id, @RequestBody Users updatedUser) {
         Users user = getId(id);
@@ -48,6 +49,7 @@ public class UsersController {
         return user;
     }
 
+    //partially update the information of this user
     @PatchMapping("/{id}")
     public Users update(@PathVariable("id") final Integer id, @RequestBody Users updatedUser) {
         Users user = getId(id);
