@@ -1,5 +1,6 @@
-# Spring Data JPA with Hibernate using MySql Example
-This project depicts the Spring Boot Example with Spring Data JPA with Hibernate using MySql Example.
+# Spring Data JPA with Hibernate using MySql
+This project depicts the Spring Boot Example with Spring Data JPA with Hibernate using MySql.
+It is a backend for a web application that shows trivia, pollings and other type of questions
 
 ## Libraries used
 - Spring Boot
@@ -15,5 +16,5 @@ This project depicts the Spring Boot Example with Spring Data JPA with Hibernate
 ## Compilation Command
 - `mvn clean install` - Plain maven clean and install
 
-##Note
+## Note
 - this project uses TechPrimer's Spring boot example as template
