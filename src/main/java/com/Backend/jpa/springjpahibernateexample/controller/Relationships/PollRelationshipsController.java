@@ -1,8 +1,6 @@
 package com.Backend.jpa.springjpahibernateexample.controller.Relationships;
 
 import com.Backend.jpa.springjpahibernateexample.controller.Questions.PollController;
-import com.Backend.jpa.springjpahibernateexample.model.Questions.Poll;
-import com.Backend.jpa.springjpahibernateexample.model.Relationships.CheckboxRelationship;
 import com.Backend.jpa.springjpahibernateexample.model.Relationships.PollRelationship;
 import com.Backend.jpa.springjpahibernateexample.repository.RelationshipsRepo.PollRelationshipRepository;
 import org.springframework.beans.factory.annotation.Autowired;
